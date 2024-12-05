@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Update</title>
+    <link rel="stylesheet" href=".css">
+</head>
+<body>
+    <div class="container">
+        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
+            <h2>Update Profile</h2>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" value="<?php echo $user['Full_name']; ?>" placeholder="Full Name" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" value="<?php echo $user['phone']; ?>" placeholder="Phone Number" required>
+
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender" value="<?php echo $user['Gender']; ?>" placeholder="Gender" required>
+
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" value="<?php echo $user['Age']; ?>" placeholder="Age" required>
+
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="electrict">Electric</option>
+                <option value="plumber">Plumber</option>
+                <option value="bambu works">Bambu Works</option>
+                <option value="home servant">Home Servant</option>
+            </select>
+
+            <label for="qualification">Qualification</label>
+            <input type="text" id="qualification" name="qualification" value="<?php echo $user['Qualification']; ?>" placeholder="Qualification" required>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" value="<?php echo $user['State']; ?>" placeholder="State" required>
+
+            <label for="district">District</label>
+            <input type="text" id="district" name="district" value="<?php echo $user['District']; ?>" placeholder="District" required>
+
+            <label for="hometown">Hometown</label>
+            <input type="text" id="hometown" name="hometwon" value="<?php echo $user['Home_twon']; ?>" placeholder="Hometown" required>
+
+            <label for="per_hour_search">Per Hour Rate</label>
+            <input type="text" id="per_hour_search" name="per_hour_search" value="<?php echo $user['perhour_Rupees']; ?>" placeholder="Per Hour Rate" required>
+
+            <label for="documents">Documents</label>
+            <input type="file" id="documents" name="documents[]" multiple>
+
+            <button type="submit">Update Profile</button>
+            <a class="logout-button" href="logout.php">Logout</a>
+        </form>
+    </div>
+</body>
+</html>
